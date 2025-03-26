@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Input from "./Input";
 
 const Signin = () => {
+  const navigate = useNavigate();
   const [triggerButton, setTriggerButton] = useState(false);
 
   function HandleClick() {
@@ -44,6 +46,7 @@ const Signin = () => {
             ? "bg-[#9ac1f7] text-white"
             : "bg-[#cbcbcb] text-[#fbfbfb]"
         } w-full py-2 md:py-3 font-medium rounded-md`}
+        onClickHandler={() => navigate("/account")}
       />
     </div>
   );

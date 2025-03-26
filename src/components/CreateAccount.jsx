@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Input from "./Input";
 
 const CreateAccount = () => {
+  const navigate = useNavigate();
   const [triggerButton, setTriggerButton] = useState(false);
 
   function HandleClick() {
@@ -69,7 +71,7 @@ const CreateAccount = () => {
         </div>
       </form>
 
-      <div className="flex h-1/2 items-end">
+      <div className="mt-50">
         <Button
           content={"Create Account"}
           className={`${
@@ -77,6 +79,7 @@ const CreateAccount = () => {
               ? "w-full py-3 bg-blue-400 text-white rounded-md font-medium"
               : "w-full border bg-[#6c25ff] text-[#efe7ff] py-3 md:py-4 rounded-md text-center"
           }`}
+          onClickHandler={() => navigate("/account")}
         />
       </div>
     </div>

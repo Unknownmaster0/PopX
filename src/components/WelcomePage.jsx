@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-end h-screen px-4 py-10 md:py-16 bg-[#f7f8f9]">
       <div className="mb-8">
@@ -15,14 +17,14 @@ const WelcomePage = () => {
           className={
             "border bg-[#6c25ff] text-[#efe7ff] py-3 md:py-4 rounded-md text-center"
           }
-          onClickHandler={() => alert("create btn is clicked")}
+          onClickHandler={() => navigate("/create-account")}
           content={"Create Account"}
         />
         <Button
           className={
             "bg-[#cebafb] text-[#31333e] py-3 md:py-4 rounded-md text-center"
           }
-          onClickHandler={() => alert("login btn is clicked")}
+          onClickHandler={() => navigate("/signin")}
           content={"Already Registered? Login"}
         />
       </div>
