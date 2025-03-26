@@ -1,8 +1,22 @@
+import { useState } from "react";
+import Button from "./Button";
 import Input from "./Input";
 
 const Signin = () => {
+  const [triggerButton, setTriggerButton] = useState(false);
+
+  function HandleClick() {
+    setTriggerButton(true);
+    setTimeout(() => {
+      setTriggerButton(false);
+    }, 200);
+  }
+
   return (
-    <div className="px-5 md:px-10 py-10 md:py-16 bg-[#f7f8f9] min-h-screen">
+    <div
+      className="px-5 md:px-10 py-10 md:py-16 bg-[#f7f8f9] min-h-screen"
+      onClick={HandleClick}
+    >
       {/* content */}
       <div className="mb-8">
         <h1 className="text-3xl font-medium">Signin to your</h1>
@@ -15,7 +29,7 @@ const Signin = () => {
       <form action="/user" className="space-y-4">
         <div>
           <Input
-            labelContent={"Email"}
+            labelContent={"Email Address"}
             placeholder={"Enter email address"}
             inputType={"email"}
           />
@@ -27,6 +41,15 @@ const Signin = () => {
             inputType={"password"}
           />
         </div>
+        <Button
+          type="submit"
+          content={"Login"}
+          className={`${
+            triggerButton
+              ? "bg-[#9ac1f7] text-white"
+              : "bg-[#cbcbcb] text-[#fbfbfb]"
+          } w-full py-2 md:py-3 font-medium rounded-md`}
+        />
       </form>
     </div>
   );

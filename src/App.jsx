@@ -3,7 +3,7 @@ import Signin from "./components/Signin";
 import WelcomePage from "./components/WelcomePage";
 
 function App() {
-  return <WelcomePage />;
+  return <Signin />;
 }
 
 export default App;
