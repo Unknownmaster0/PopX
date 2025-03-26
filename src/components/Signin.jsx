@@ -26,7 +26,7 @@ const Signin = () => {
         </p>
       </div>
       {/* form */}
-      <form action={""} className="space-y-4">
+      <form className="space-y-4 mb-5">
         <div>
           <Input
             labelContent={"Email Address"}
@@ -36,16 +36,15 @@ const Signin = () => {
         <div>
           <Input labelContent={"Password"} placeholder={"Enter password"} />
         </div>
-        <Button
-          type="submit"
-          content={"Login"}
-          className={`${
-            triggerButton
-              ? "bg-[#9ac1f7] text-white"
-              : "bg-[#cbcbcb] text-[#fbfbfb]"
-          } w-full py-2 md:py-3 font-medium rounded-md`}
-        />
       </form>
+      <Button
+        content={"Login"}
+        className={`${
+          triggerButton
+            ? "bg-[#9ac1f7] text-white"
+            : "bg-[#cbcbcb] text-[#fbfbfb]"
+        } w-full py-2 md:py-3 font-medium rounded-md`}
+      />
     </div>
   );
 };
