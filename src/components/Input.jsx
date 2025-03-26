@@ -1,8 +1,8 @@
-const Input = ({ labelContent, inputType, placeholder }) => {
+const Input = ({ labelContent, placeholder }) => {
   return (
     <div className="relative mt-6">
       <input
-        type={`${inputType}`}
+        type={"text"}
         disabled={"true"}
         placeholder={`${placeholder}`}
         className="border border-gray-300 rounded-md px-3 py-1 w-full placeholder:text-sm placeholder:font-light"

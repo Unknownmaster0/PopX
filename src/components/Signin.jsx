@@ -26,20 +26,15 @@ const Signin = () => {
         </p>
       </div>
       {/* form */}
-      <form action="/user" className="space-y-4">
+      <form action={""} className="space-y-4">
         <div>
           <Input
             labelContent={"Email Address"}
             placeholder={"Enter email address"}
-            inputType={"email"}
           />
         </div>
         <div>
-          <Input
-            labelContent={"Password"}
-            placeholder={"Enter password"}
-            inputType={"password"}
-          />
+          <Input labelContent={"Password"} placeholder={"Enter password"} />
         </div>
         <Button
           type="submit"

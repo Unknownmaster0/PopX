@@ -68,3 +68,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+.ImgContainer {
+  background-image: url("../public/happy-ambitious-hr-manager-choosing-you.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
