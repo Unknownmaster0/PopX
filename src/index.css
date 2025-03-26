@@ -70,7 +70,7 @@ button:focus-visible {
 } */
 
 .ImgContainer {
-  background-image: url("../public/happy-ambitious-hr-manager-choosing-you.jpg");
+  background-image: url("/happy-ambitious-hr-manager-choosing-you.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
